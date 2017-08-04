@@ -1,0 +1,22 @@
+input{
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+}
+
+button{
+  background-color: #fff;
+  border: 1px solid #333;
+  padding:16px 7px;
+  text-align: center;
+  min-width: 300px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #333;
+  transition: background-color 0.5s ease;
+  border: 1px solid #333;
+  color:#fff;
+  padding:16px 7px;
+}
