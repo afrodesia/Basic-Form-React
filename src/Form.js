@@ -29,6 +29,13 @@ class Form extends Component{
       email: '',
       password: '',
     })
+    this.props.onChange({
+      firstName: '',
+      lastName: '',
+      username: '',
+      email: '',
+      password: '',
+    })
   }
 
   render(){
