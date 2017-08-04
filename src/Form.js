@@ -12,15 +12,16 @@ class Form extends Component{
   }
 
   change = (e) => {
-    this.setState({
-      
+    this.props.onChange({ [e.target.name]: e.target.value})
+    this.setState({   
       [e.target.name]: e.target.value
     })
   }
 
   onSubmit = (e) => {
     e.preventDefault()
-    this.props.onSubmit(this.state)
+    // this.props.onSubmit(this.state)
+
     this.setState({
       firstName: '',
       lastName: '',
