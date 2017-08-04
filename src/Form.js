@@ -64,7 +64,7 @@ class Form extends Component{
 
           <TextField
             className="input"
-            floatingLabelText="Lastname"
+            floatingLabelText="Username"
             floatingLabelFixed={true}
             name="username" 
             value={this.state.username} 
@@ -83,7 +83,7 @@ class Form extends Component{
 
            <TextField
             className="input"
-            floatingLabelText="Email"
+            floatingLabelText="Password"
             floatingLabelFixed={true}
             name="password"
             type="password"
