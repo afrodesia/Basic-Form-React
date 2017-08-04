@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import Form from './Form'
-import './App.css'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
+import './App.css'
+import Form from './Form'
+
+
+injectTapEventPlugin();
 
 
 class App extends Component {
@@ -20,10 +25,12 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <Form onChange={fields => this.onChange(fields)} />
-        <p>{JSON.stringify(this.state.fields, null, 2)}</p>
-      </div>
+      <MuiThemeProvider>
+        <div className="App">
+          <Form onChange={fields => this.onChange(fields)} />
+          <code className="code">{JSON.stringify(this.state.fields, null, 2)}</code>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }

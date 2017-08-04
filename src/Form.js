@@ -1,5 +1,6 @@
 import  React, { Component } from 'react'
-
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class Form extends Component{
   state = {
@@ -41,44 +42,57 @@ class Form extends Component{
   render(){
     return(
       <form>
-        <input 
+
+
+        <TextField
+          className="input"
+          floatingLabelText="Firstname"
+          floatingLabelFixed={true}
           name="firstName"
-          placeholder="First Name" 
           value={this.state.firstName} 
           onChange={ e => this.change(e) } 
           />
 
-          <input
+          <TextField
+            className="input"
+            floatingLabelText="Lastname"
+            floatingLabelFixed={true}
             name="lastName" 
-            placeholder="Last Name" 
             value={this.state.lastName}
             onChange={ e => this.change(e) }  
           />
 
-          <input
+          <TextField
+            className="input"
+            floatingLabelText="Lastname"
+            floatingLabelFixed={true}
             name="username" 
-            placeholder="Username" 
             value={this.state.username} 
             onChange={ e => this.change(e) } 
           />
 
-          <input
+          <TextField
+            className="input"
+            floatingLabelText="Email"
+            floatingLabelFixed={true}
             name="email" 
-            placeholder="Email" 
             type="email"
             value={this.state.email} 
             onChange={ e => this.change(e) }  
           />
 
-           <input
+           <TextField
+            className="input"
+            floatingLabelText="Email"
+            floatingLabelFixed={true}
             name="password"
-            placeholder="Password" 
             type="password"
             value={this.state.passeword} 
             onChange={ e => this.change(e) } 
           />
 
-          <button onClick={e => this.onSubmit(e)}> Submit </button>
+           <RaisedButton label="Submit"  onClick={e => this.onSubmit(e)} />
+
       </form>
     )
   }
