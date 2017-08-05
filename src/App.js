@@ -27,6 +27,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
+          <h1>Basic Form - React.js</h1>
           <Form onChange={fields => this.onChange(fields)} />
           <code className="code">{JSON.stringify(this.state.fields, null, 2)}</code>
         </div>
